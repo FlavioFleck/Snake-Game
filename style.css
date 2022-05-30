@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    --darkGray: #212529;
+    --gray: #343a40;
+    --violet: #7c25d7;
+    --lightViolet: #7c25d7;
+}
+
+body {
+    background-color: var(--darkGray);
+}
+
+canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    height: 500px;
+    width: 500px;
+    image-rendering: pixelated;
+    background-color: var(--gray);
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, .5);
+}
+
+.modalBackground {
+    opacity: 0;
+    pointer-events: auto;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    transition: .8s;
+}
+.modalBackground.active {
+    opacity: 1;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    height: 18rem;
+    width: 30rem;
+    background-color: var(--gray);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 100%;
+    color: white;
+}
+
+.restart {
+    padding: 5px 10px;
+    height: 50px;
+    width: 150px;
+    border: none;
+    color: white;
+    background-color: var(--violet);
+    transition: .3s;
+}
+
+.restart:hover {
+    cursor: pointer;
+    background-color: #8447ff;
+}
